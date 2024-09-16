@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper For You
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="asset/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h1 class="site-title">Wallpaper For You</h1> 
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search wallpaper..." onkeyup="searchWallpaper()">
+        <button class="guide-btn" onclick="showGuide()">Guide</button>
+    </div>
+
+    <!-- Guide for Search Keywords -->
+    <div id="guide" class="guide hidden">
+        <h3>Search Guide</h3>
+        <p>Use keywords like: "Nature", "Cars", "Technology", "Animals", "Abstract" etc.</p>
+    </div>
+
+    <!-- Wallpaper Grid -->
+    <section id="wallpaper-grid" class="wallpaper-grid">
+        <!-- Example wallpaper items -->
+        <div class="wallpaper-item" data-name="Nature">
+            <img src="img/w1.jpg" alt="Wallpaper 1">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/w1.jpg')">Preview</button>
+                <a href="img/w1.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Cars">
+            <img src="img/w2.jpg" alt="Wallpaper 2">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/w2.jpg')">Preview</button>
+                <a href="img/w2.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Technology">
+            <img src="img/w3.png" alt="Wallpaper 3">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/w3.png')">Preview</button>
+                <a href="img/w3.png" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Nature">
+            <img src="img/w4.jpg" alt="Wallpaper 1">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/w4.jpg')">Preview</button>
+                <a href="img/w4.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Nature">
+            <img src="img/wallhaven-423866.jpg" alt="Wallpaper 1">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/wallhaven-423866.jpg')">Preview</button>
+                <a href="img/wallhaven-423866.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Nature">
+            <img src="img/wallhaven-jxzy25.jpg" alt="Wallpaper 1">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/wallhaven-jxzy25.jpg')">Preview</button>
+                <a href="img/wallhaven-jxzy25.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Nature">
+            <img src="img/wallhaven-nedqkw.jpg" alt="Wallpaper 1">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/wallhaven-nedqkw.jpg')">Preview</button>
+                <a href="img/wallhaven-nedqkw.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <div class="wallpaper-item" data-name="Nature">
+            <img src="img/w5.jpg" alt="Wallpaper 1">
+            <div class="buttons">
+                <button onclick="previewWallpaper('img/w5.jpg')">Preview</button>
+                <a href="img/w5.jpg" download><button>Download</button></a>
+            </div>
+        </div>
+        <!-- Add more wallpaper items as needed -->
+    </section>
+
+    <!-- Modal for Preview -->
+    <div id="previewModal" class="modal hidden">
+        <span class="close" onclick="closePreview()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
